@@ -1,11 +1,33 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/freedom/freedom",
+    "pages/index/index",
+    "pages/my/my"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#1177b0",
+    "position":"top",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/freedom/freedom",
+        "text": "自由"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
   }
 }
