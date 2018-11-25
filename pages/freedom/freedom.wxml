@@ -1,23 +1,40 @@
+
 <view class='content'>
+  <view class='textcss'>CPU</view>
+  <image class='imagecss' src='../../image/cpu.jpg'></image>
 </view>
 
 <view class='content'>
+  <view class='textcss'>显卡</view>
+  <image class='imagecss' src='../../image/video_card.jpg'></image>
 </view>
 
 <view class='content'>
+  <view class='textcss'>内存条</view>
+  <image class='imagecss' src='../../image/memory.jpg'></image>
 </view>
 
 <view class='content'>
+  <view class='textcss'>主板</view>
+  <image class='imagecss' src='../../image/board.jpg'></image>
 </view>
 
 <view class='content'>
+  <view class='textcss'>散热器</view>
+  <image class='imagecss' src='../../image/hot.jpg'></image>
 </view>
 
 <view class='content'>
+  <view class='textcss'>硬盘</view>
+  <image class='imagecss' src='../../image/hard_disk.jpg'></image>
 </view>
 
 <view class='content'>
+  <view class='textcss'>电源</view>
+  <image class='imagecss' src='../../image/power.jpg'></image>
 </view>
 
 <view class='content'>
+  <view class='textcss'>机箱</view>
+  <image class='imagecss' src='../../image/chassis.jpg'></image>
 </view>

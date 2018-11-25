@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/freedom/freedom",
-    "pages/index/index",
-    "pages/my/my"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,7 +22,7 @@
       },
       {
         "pagePath": "pages/freedom/freedom",
-        "text": "自由"
+        "text": "市场"
       },
       {
         "pagePath": "pages/my/my",
