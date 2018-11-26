@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/my/my",
-    "pages/freedom/freedom",
-    "pages/index/index"
+    "pages/freedom/freedom"
   ],
   "window": {
     "backgroundTextStyle": "light",
