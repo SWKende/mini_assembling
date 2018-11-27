@@ -1,1 +1,6 @@
-<i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
+<view class="titlecss"></view>
+<view class='forcss' wx:for="{{tabs}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='clickbutton'>
+  <view class='contentcss'>
+    {{item.name}}
+  </view>
+</view>

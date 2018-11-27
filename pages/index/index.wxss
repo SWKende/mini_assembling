@@ -1,0 +1,12 @@
+.titlecss{
+  height: 350rpx;
+  background-color: #f7f7f7;
+  margin-top: 30rpx;
+}
+.forcss{
+  margin: 50rpx 25rpx 30rpx 25rpx;
+  background-color: #f7f7f7;
+}
+.contentcss{
+  height: 200rpx;
+}
