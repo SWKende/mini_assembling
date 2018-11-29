@@ -1,6 +1,6 @@
 <view class="titlecss"></view>
-<view class='forcss' wx:for="{{items}}" wx:key="{{item.title}}" data-id="{{item.title}}" bindtap='clickbutton'>
-  <view class='contentcss'>
-    {{item.name}}
+<view class='forcss' wx:for="{{position}}" wx:key="{{item.price}}" data-id="{{item.price}}" bindtap='clickbutton'>
+  <view class='contenttitle'> ~ {{item.name}}价位电脑推荐 ~</view>
+  <view class='content'>
   </view>
 </view>
