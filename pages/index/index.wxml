@@ -1,5 +1,5 @@
 <view class="titlecss"></view>
-<view class='forcss' wx:for="{{tabs}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='clickbutton'>
+<view class='forcss' wx:for="{{items}}" wx:key="{{item.title}}" data-id="{{item.title}}" bindtap='clickbutton'>
   <view class='contentcss'>
     {{item.name}}
   </view>

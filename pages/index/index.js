@@ -1,24 +1,12 @@
+const recommend = require("../../utils/recommend.js")
 Page({
   data: {
-    tabs: '',
+    items:''
   },
   onLoad: function() {
-    let tab = [{
-      "id": 1,
-      "name": "1",
-    }, {
-      "id": 2,
-      "name": "2",
-    }, {
-      "id": 3,
-      "name": "3",
-    }, {
-      "id": 4,
-      "name": "4",
-    }]
-    this.setData({
-      tabs: tab
-    })
+    let that = this;
+    recommend.init(that);
+    console.log(this.data.items);
   },
   clickbutton(e) {
     console.log(e.currentTarget.dataset.id)
