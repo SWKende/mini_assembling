@@ -9,6 +9,25 @@ const video_card_price = require("../utils/video_card_price.js");
 
 var items = [{
   "type": "Intel",
+  "title": "i5 8400超高性价比平台",
+  "cpu": "i5 8400",
+  "cpu_p": 0,
+  "board": "昂达H310C-SD3",
+  "board_p": 0,
+  "memory": "H110/H310集邦DDR3 8G",
+  "memory_p": 0,
+  "hot": "T400i散热器",
+  "hot_p": 0,
+  "video_card": "迪兰恒进RX580 8G X-Serial战将",
+  "video_card_p": 0,
+  "hard_disk": "铭瑄终结者固态 240G",
+  "hard_disk_p": 0,
+  "chassis": "TT启航者F1机箱",
+  "chassis_p": 0,
+  "power": "安钛克VP450P 450W",
+  "power_p": 0
+}, {
+  "type": "Intel",
   "title": "i5 8400高性能游戏平台",
   "cpu": "i5 8400",
   "cpu_p": 0,
@@ -38,32 +57,13 @@ var items = [{
   "hot": "T400i散热器",
   "hot_p": 0,
   "video_card": "迪兰恒进RX580 8G X-Serial战将",
-  "video_card_p": 1369,
-  "hard_disk": "铭瑄终结者固态 240G",
-  "hard_disk_p": 0,
-  "chassis": "TT启航者F1机箱",
-  "chassis_p": 0,
-  "power": "安钛克VP450P 450W",
-  "power_p": 259
-}, {
-  "type": "Intel",
-  "title": "i5 8400超高性价比平台",
-  "cpu": "i5 8400",
-  "cpu_p": 0,
-  "board": "昂达H310C-SD3",
-  "board_p": 0,
-  "memory": "H110/H310集邦DDR3 8G",
-  "memory_p": 0,
-  "hot": "T400i散热器",
-  "hot_p": 0,
-  "video_card": "迪兰恒进RX580 8G X-Serial战将",
   "video_card_p": 0,
   "hard_disk": "铭瑄终结者固态 240G",
   "hard_disk_p": 0,
   "chassis": "TT启航者F1机箱",
   "chassis_p": 0,
   "power": "安钛克VP450P 450W",
-  "power_p": 250
+  "power_p": 0
 }]
 
 function init(that) {

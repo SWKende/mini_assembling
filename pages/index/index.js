@@ -64,6 +64,13 @@ Page({
     for (let i = 0; i < position.length; i++) {
       if (id == position[i].price) {
         console.log(position[i])
+        wx.setStorage({
+          key: 'pc_items',
+          data: position[i].position_data,
+        })
+        wx.navigateTo({
+          url: '../pcitems/pcitems',
+        })
       }
     }
 
