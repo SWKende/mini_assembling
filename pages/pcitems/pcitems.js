@@ -14,11 +14,21 @@ Page({
             arr.push(res.data[i]);
           }
         }
+        //给每个list附加id
+        for (let j = 0; j < arr.length; j++) {
+          arr[j].id = j;
+        }
         console.log(arr);
         that.setData({
           items: arr
         })
       },
     })
+
+
   },
+  clickbutton(e) {
+    let id = e.currentTarget.dataset.id
+    console.log(id);
+  }
 })

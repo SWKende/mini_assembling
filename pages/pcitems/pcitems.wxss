@@ -1,1 +1,52 @@
-/* pages/pcitems/pcitems.wxss */
+.page {
+  margin-top: 30rpx;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.card {
+  margin-bottom:40rpx;
+  /* background-color: #f7f7f7; */
+  display: flex;
+  flex-direction: column;
+  border: 1rpx solid #1177b0;
+}
+.titlecard{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50rpx;
+  height: 100rpx;
+  width: 100%;
+  background-color: #8abcd1;
+}
+.cardname{
+  font-size: 40rpx;
+  color: #81776e;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.listname{
+  color: #000;
+  margin-left: 50rpx;
+  font-size: 30rpx;
+}
+.price{
+  position: absolute;
+  right: 10%;
+  font-size: 25rpx;
+  color: #f07c82;
+}
+.download{
+  margin-top: 20rpx;
+  width: 100%;
+  background-color: #1177b0;
+  border-radius: 0;
+}
+.download_hover{
+  background-color: #11659a;
+}
