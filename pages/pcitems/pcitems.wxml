@@ -1,37 +1,37 @@
 <view class='page'>
   <view class='card' wx:for="{{items}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='clickbutton'>
-    <view class='titlecard'>标题</view>
-    <view class='cardname'>Text
-      <p class='listname'>测试</p>
-      <p class="price">11</p>
+    <view class='titlecard'>{{item.title}}</view>
+    <view class='cardname'>CPU
+      <p class='listname'>{{item.cpu}}</p>
+      <p class="price">{{item.cpu_p}}</p>
     </view>
-    <view class='cardname'>Text
-      <p class='listname'>测试</p>
-      <p class="price">11</p>
+    <view class='cardname'>主板
+      <p class='listname'>{{item.board}}</p>
+      <p class="price">{{item.board_p}}</p>
     </view>
-    <view class='cardname'>Text
-      <p class='listname'>测试</p>
-      <p class="price">11</p>
+    <view class='cardname'>内存
+      <p class='listname'>{{item.memory}}</p>
+      <p class="price">{{item.memory_p}}</p>
     </view>
-    <view class='cardname'>Text
-      <p class='listname'>测试</p>
-      <p class="price">11</p>
+    <view class='cardname'>显卡
+      <p class='listname'>{{item.video_card}}</p>
+      <p class="price">{{item.video_card_p}}</p>
     </view>
-    <view class='cardname'>Text
-      <p class='listname'>测试</p>
-      <p class="price">11</p>
+    <view class='cardname'>散热
+      <p class='listname'>{{item.hot}}</p>
+      <p class="price">{{item.hot_p}}</p>
     </view>
-    <view class='cardname'>Text
-      <p class='listname'>测试</p>
-      <p class="price">11</p>
+    <view class='cardname'>硬盘
+      <p class='listname'>{{item.hard_disk}}</p>
+      <p class="price">{{item.hard_disk_p}}</p>
     </view>
-    <view class='cardname'>Text
-      <p class='listname'>测试</p>
-      <p class="price">11</p>
+    <view class='cardname'>机箱
+      <p class='listname'>{{item.chassis}}</p>
+      <p class="price">{{item.chassis_p}}</p>
     </view>
-    <view class='cardname'>Text
-      <p class='listname'>测试</p>
-      <p class="price">11</p>
+    <view class='cardname'>电源
+      <p class='listname'>{{item.power}}</p>
+      <p class="price">{{item.power_p}}</p>
     </view>
     <button class='download' hover-class='download_hover'>click</button>
   </view>

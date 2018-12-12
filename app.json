@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/pcitems/pcitems",
-    "pages/index/index",
     "pages/my/my",
+    "pages/index/index",
+    "pages/pcitems/pcitems",
     "pages/freedom/freedom"
   ],
   "window": {
