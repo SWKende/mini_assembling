@@ -6,7 +6,6 @@
 
 .card {
   margin-bottom:40rpx;
-  /* background-color: #f7f7f7; */
   display: flex;
   flex-direction: column;
   border: 1rpx solid #1177b0;
@@ -19,10 +18,10 @@
   font-size: 32rpx;
   height: 100rpx;
   width: 100%;
-  background-color: #8abcd1;
+  background-color: #1177b0;
 }
 .cardname{
-  font-size: 24rpx;
+  font-size: 35rpx;
   color: #81776e;
   margin-top: 10rpx;
   margin-bottom: 10rpx;

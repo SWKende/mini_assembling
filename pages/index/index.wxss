@@ -1,17 +1,27 @@
-.titlecss{
+.titlecss {
   height: 350rpx;
   background-color: #f7f7f7;
   margin-top: 30rpx;
+  overflow: hidden;
 }
-.forcss{
+
+.forcss {
   margin: 50rpx 25rpx 30rpx 25rpx;
   background-color: #f7f7f7;
 }
-.contenttitle{
+
+.contenttitle {
   background-color: #fff;
   font-size: 24rpx;
   text-align: center;
 }
-.content{
-  height: 200rpx;
+
+.content {
+  height: 230rpx;
+  overflow: hidden;
+}
+
+.imgcss {
+  width: 100%;
+  margin-top: -100rpx;
 }

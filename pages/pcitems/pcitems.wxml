@@ -33,6 +33,6 @@
       <p class='listname'>{{item.power}}</p>
       <p class="price">{{item.power_p}}</p>
     </view>
-    <button class='download' hover-class='download_hover'>click</button>
+    <!-- <button class='download' hover-class='download_hover'>click</button> -->
   </view>
 </view>
