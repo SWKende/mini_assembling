@@ -7,6 +7,7 @@ page {
   margin: 30rpx 25rpx 15rpx 25rpx;
   background-color: #f7f7f7;
   overflow: hidden;
+  box-shadow: 5rpx 5rpx 5rpx #888;
 }
 
 .imagecss {

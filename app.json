@@ -1,10 +1,14 @@
 {
   "pages": [
+    "pages/freedomlist/freedomlist",
+    "pages/my/my",
+    "pages/freedom/freedom",
     "pages/index/index",
     "pages/indextitle/indextitle",
-    "pages/my/my",
     "pages/pcitems/pcitems",
-    "pages/freedom/freedom"
+    "pages/about/about",
+    "pages/collection/collection",
+    "pages/history/history"
   ],
   "window": {
     "backgroundTextStyle": "light",

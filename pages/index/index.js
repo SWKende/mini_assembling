@@ -10,7 +10,7 @@ Page({
     let position = [{
       "price": "2000",
       "name": "0-2000元",
-      "image": "http://imgsrc.baidu.com/forum/w%3D580%3B/sign=855ca9415a2c11dfded1bf2b531c63d0/1b4c510fd9f9d72a87dc7ebfd92a2834359bbbdc.jpg",
+      "image": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545384547559&di=180fef9fb0d5e7d5f896785dd2710e68&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fa9d3fd1f4134970a66a571169ecad1c8a7865d30.jpg",
       "position_data": []
     }, {
       "price": "4000",
@@ -25,12 +25,12 @@ Page({
     }, {
       "price": "8000",
       "name": "6000-8000元",
-      "image": "http://imgsrc.baidu.com/forum/w%3D580%3B/sign=855ca9415a2c11dfded1bf2b531c63d0/1b4c510fd9f9d72a87dc7ebfd92a2834359bbbdc.jpg",
+        "image": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545384591165&di=a11082238e9e660e07589bee0ab8f05a&imgtype=0&src=http%3A%2F%2Fwww.lscuibao.com%2Fd%2Ffile%2Fbitpic%2F1111%2Fpc0duuozc53.jpg",
       "position_data": []
     }, {
       "price": "10000",
       "name": "8000元以上",
-      "image": "http://imgsrc.baidu.com/forum/w%3D580%3B/sign=855ca9415a2c11dfded1bf2b531c63d0/1b4c510fd9f9d72a87dc7ebfd92a2834359bbbdc.jpg",
+        "image": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545384660374&di=a15a765f03e28a31d056ba02b589b74c&imgtype=0&src=http%3A%2F%2Fimg5.pcpop.com%2FArticleImages%2F730x547%2F3%2F3518%2F003518030.jpg",
       "position_data": []
     }]
     this.setData({

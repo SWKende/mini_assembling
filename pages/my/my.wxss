@@ -1,0 +1,28 @@
+.content {
+  margin: 30rpx 20rpx 0rpx 20rpx;
+}
+
+.diycss {
+  /* position: absolute; */
+  height: 350rpx;
+  border: 2rpx #e8e8e8 solid;
+}
+
+.box {
+  /* position: absolute; */
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.list {
+  font-size: 28rpx;
+  height: 100rpx;
+  width: 90%;
+  border-bottom: 1rpx #e8e8e8 solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5%;
+  padding-left: 5%;
+}

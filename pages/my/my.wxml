@@ -1,2 +1,8 @@
-<view>
+<view class='content'>
+  <view class='diycss' bindtap='freedombtn'>
+  </view>
+  <view class='list' wx:for="{{btnlist}}" wx:key="{{item.index}}" data-id="{{item.index}}" bindtap='clickbtn'>
+    <text>{{item.name}}</text>
+    <text>▷</text>
+  </view>
 </view>
