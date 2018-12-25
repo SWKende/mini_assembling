@@ -1,2 +1,9 @@
-<!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view class='title'>
+  关于
+</view>
+<view>
+  这是一款比价、推荐、查价的一款小程序
+</view>
+<view>
+  版本0.1.0
+</view>

@@ -1,0 +1,41 @@
+.title {
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.listcss {
+  display: flex;
+  margin: 20rpx;
+  align-items: center;
+  border: 2rpx solid #1177b0;
+  height: 90rpx;
+}
+
+.listhead {
+  height: 90rpx;
+  width: 90rpx;
+  background-color: #1177b0;
+}
+
+.listname {
+  font-size: 30rpx;
+  margin-left: 2%;
+  max-width: 300rpx;
+}
+
+.listprice {
+  position: absolute;
+  font-size: 24rpx;
+  color: #f07c82;
+  right: 8%;
+}
+
+.nodatacss {
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  color: #898989;
+}

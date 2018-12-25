@@ -2,6 +2,7 @@
 Page({
   data: {
     items: [],
+    nodata: false
   },
   onLoad() {
     let that = this;
@@ -19,10 +20,21 @@ Page({
           arr[j].id = j;
         }
         console.log(arr);
-        that.setData({
-          items: arr
-        })
+        if (arr == "") {
+          that.setData({
+            nodata: true
+          })
+        } else {
+          that.setData({
+            items: arr
+          })
+        }
       },
+      fail() {
+        that.setData({
+          nodata: true
+        })
+      }
     })
 
 

@@ -4,6 +4,9 @@ var items = [{
 }]
 
 function rec() {
+  for (let i = 0; i < items.length; i++) {
+    items[i].id = 5
+  }
   return items;
 }
 

@@ -17,7 +17,6 @@ Page({
     this.setData({
       btnlist: btnlist
     })
-    console.log(this.data.btnlist)
   },
   clickbtn(e) {
     let index = e.currentTarget.dataset.id;

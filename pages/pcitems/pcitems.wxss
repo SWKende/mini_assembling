@@ -49,3 +49,10 @@
 .download_hover{
   background-color: #11659a;
 }
+
+.nodatacss{
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  color: #898989;
+}
