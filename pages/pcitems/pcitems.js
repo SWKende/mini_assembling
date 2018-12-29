@@ -1,4 +1,3 @@
-// pages/pcitems/pcitems.js
 Page({
   data: {
     items: [],

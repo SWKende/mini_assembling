@@ -10,7 +10,7 @@ Page({
       key: 'freedomlist',
       success: function(res) {
         let fdtitle = "";
-        switch (res.data[0].id) {
+        switch (res.data[0].onlyid) {
           case 1:
             fdtitle = "CPU";
             break;

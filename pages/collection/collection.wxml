@@ -1,2 +1,7 @@
-<!--pages/collection/collection.wxml-->
-<text>pages/collection/collection.wxml</text>
+<view class='movablecontent'>
+  <movable-area>
+    <movable-view x="{{x}}" y="{{y}}" direction="all" bindchange="onChange" damping="100">帽子</movable-view>
+  </movable-area>
+  <view class='content'></view>
+  <view class='buttoncss'>{{data}}</view>
+</view>

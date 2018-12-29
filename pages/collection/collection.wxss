@@ -1,1 +1,33 @@
-/* pages/collection/collection.wxss */
+page{
+ background-color: #fff; 
+}
+.content{
+  position: absolute;
+  top: 100rpx;
+  left: 30%;
+  height: 500rpx;
+  width: 40%;
+  background-color: #fff;
+}
+movable-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  width: 100rpx;
+  background: #1AAD19;
+  color: #fff;
+}
+movable-area {
+  height: 1200rpx;
+  width: 750rpx;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.buttoncss{
+  position: absolute;
+  background-color: #fff;
+  height: 100rpx;
+  width: 300rpx;
+  bottom: 0rpx;
+}

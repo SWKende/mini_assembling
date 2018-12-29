@@ -1,13 +1,13 @@
 {
   "pages": [
     "pages/my/my",
+    "pages/collection/collection",
     "pages/index/index",
     "pages/freedomlist/freedomlist",
     "pages/pcitems/pcitems",
     "pages/indextitle/indextitle",
     "pages/about/about",
     "pages/freedom/freedom",
-    "pages/collection/collection",
     "pages/history/history"
   ],
   "window": {

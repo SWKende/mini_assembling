@@ -1,4 +1,4 @@
-const recommend = require("../../utils/recommend.js");
+var Bmob = require('../../utils/bmob.js');
 Page({
   data: {
     btnlist: [],
@@ -34,9 +34,6 @@ Page({
       })
     }
   },
-  freedombtn(){
-    console.log("diy")
-  }
-
-
+  onShow() {},
+  freedombtn() {}
 })
