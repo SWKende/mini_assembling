@@ -1,4 +1,4 @@
-// const Bmob = require('../../utils/bmob.js');
+const Bmob = require('../../utils/bmob.js');
 
 Page({
   data: {

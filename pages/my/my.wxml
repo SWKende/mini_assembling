@@ -1,5 +1,7 @@
 <view class='content'>
   <view class='diycss' bindtap='freedombtn'>
+    <view class='diytext'>1、这是一个</view>
+    <view class='diytext'>2、这是一个</view>
   </view>
   <view class='list' wx:for="{{btnlist}}" wx:key="{{item.index}}" data-id="{{item.index}}" bindtap='clickbtn'>
     <text>{{item.name}}</text>

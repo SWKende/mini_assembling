@@ -1,7 +1,4 @@
-<view class='movablecontent'>
-  <movable-area>
-    <movable-view x="{{x}}" y="{{y}}" direction="all" bindchange="onChange" damping="100">帽子</movable-view>
-  </movable-area>
-  <view class='content'></view>
-  <view class='buttoncss'>{{data}}</view>
-</view>
+<image class='body' src="http://cdn1.u.h5mc.com/c/sbhc/gqbs/images/5c15e60a9bbd0f4a7559ec5b.png">
+</image>
+<image class='head' src="http://cdn3.u.h5mc.com/c/sbhc/gqbs/images/5c15e9e29bbd0f501b6c9415.png"></image>
+<view class='hat'>帽子</view>

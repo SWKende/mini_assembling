@@ -6,6 +6,10 @@
   /* position: absolute; */
   height: 350rpx;
   border: 2rpx #e8e8e8 solid;
+  padding: 25rpx;
+}
+.diytext{
+  font-size: 28rpx;
 }
 
 .box {
