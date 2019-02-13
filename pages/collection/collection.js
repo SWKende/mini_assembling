@@ -1,8 +1,6 @@
 Page({
   data: {
-    data: ''
+    res: ''
   },
-  onLoad: function(options) {
-
-  },
+  
 })

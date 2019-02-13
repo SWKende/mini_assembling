@@ -1,7 +1,9 @@
-var Bmob = require('../../utils/bmob.js');
+const Bmob = require('../../utils/bmob.js');
 Page({
   data: {
     btnlist: [],
+    message: true,
+    mesdata: ''
   },
   onLoad() {
     let btnlist = [{
@@ -13,11 +15,35 @@ Page({
     }, {
       "name": "关于",
       "index": 3
+    }, {
+      "name": "留言",
+      "index": 4
     }]
     this.setData({
-      btnlist: btnlist
+      btnlist: btnlist,
+    })
+    wx.showLoading({
+      title: '数据获取中',
+      mask: true
+    })
+    let Diary = Bmob.Object.extend("message");
+    let query = new Bmob.Query(Diary);
+    query.equalTo("type","<",1)
+    query.find({
+      success(res) {
+        wx.hideLoading()
+        console.log(res)
+      },
+      error(res) {
+        wx.hideLoading()
+        wx.showToast({
+          title: '更新失败',
+          icon: "none"
+        })
+      }
     })
   },
+  onShow() {},
   clickbtn(e) {
     let index = e.currentTarget.dataset.id;
     if (index == 1) {
@@ -32,8 +58,65 @@ Page({
       wx.navigateTo({
         url: '../about/about',
       })
+    } else if (index == 4) {
+      this.setData({
+        message: false,
+      })
     }
   },
-  onShow() {},
-  freedombtn() {}
+  messageboardbtn() {},
+  //获取用户留言内容
+  mesInput(e) {
+    this.setData({
+      mesdata: e.detail.value
+    })
+  },
+  submit() {
+    let that = this
+    let mesdata = this.data.mesdata;
+    wx.showModal({
+      title: '留言',
+      content: '点击提交后会审核，审核通过将会出现在网友留言板当中',
+      success(res) {
+        if (res.confirm) {
+          wx.showLoading({
+            title: '请稍等',
+          })
+          var Diary = Bmob.Object.extend("message");
+          var query = new Diary();
+          query.set('question', mesdata)
+          query.save(null, {
+            success(res) {
+              console.log(res)
+              wx.hideLoading()
+              wx.showToast({
+                title: '提交成功',
+                icon: "none"
+              })
+              that.setData({
+                mesdata: '',
+                message: true
+              })
+
+            },
+            error(res) {
+              wx.hideLoading()
+              wx.showToast({
+                title: '提交失败',
+                icon: "none"
+              })
+            }
+          });
+
+        } else if (res.cancel) {}
+      }
+    })
+
+  },
+  //隐藏留言单
+  hiddenbg() {
+    this.setData({
+      message: true,
+    })
+  }
 })

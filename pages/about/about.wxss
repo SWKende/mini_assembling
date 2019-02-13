@@ -1,1 +1,15 @@
-
+.titlecss{
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+.contentcss{
+  font-size: 28rpx;
+  color: #898989;
+  margin-left: 40rpx;
+}
+.buttoncss{
+  position: absolute;
+  bottom: 50rpx;
+  margin-left: 10%;
+  width: 80%;
+}

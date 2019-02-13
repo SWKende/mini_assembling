@@ -1,1 +1,12 @@
-/* pages/history/history.wxss */
+.content {
+  margin: 30rpx 20rpx 30rpx 20rpx;
+}
+
+.textcss {
+  text-align: center;
+  margin-top: 10rpx;
+  width: 100%;
+  font-size: 28rpx;
+  color: #898989;
+  text-indent:50rpx;
+}

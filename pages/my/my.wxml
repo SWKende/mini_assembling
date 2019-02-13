@@ -1,10 +1,22 @@
 <view class='content'>
-  <view class='diycss' bindtap='freedombtn'>
-    <view class='diytext'>1、这是一个</view>
-    <view class='diytext'>2、这是一个</view>
+  <view class='diycss' bindtap='messageboardbtn'>
+    <view class='diytext_title'>网友留言板</view>
+    <view class='diytext'>我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题</view>
   </view>
   <view class='list' wx:for="{{btnlist}}" wx:key="{{item.index}}" data-id="{{item.index}}" bindtap='clickbtn'>
     <text>{{item.name}}</text>
     <text>▷</text>
+  </view>
+</view>
+
+<!-- 留言单 -->
+<view class='messagebg' bindtap='hiddenbg' hidden='{{message}}'>
+</view>
+<view class='messagecss' hidden='{{message}}'>
+  <view class='mestitle'>留言单</view>
+  <textarea class='mesinput' placeholder='请注意措辞，不要发布无关言论，字数上限200字' maxlength='200' value='{{mesdata}}' bindinput="mesInput"></textarea>
+  <view class='btnbox'>
+    <view class='btnsize cancel' bindtap='hiddenbg'>取消</view>
+    <view class='btnsize sure' bindtap='submit'>提交</view>
   </view>
 </view>
