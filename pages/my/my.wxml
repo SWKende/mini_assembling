@@ -1,7 +1,12 @@
 <view class='content'>
   <view class='diycss' bindtap='messageboardbtn'>
     <view class='diytext_title'>网友留言板</view>
-    <view class='diytext'>我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题我想问个问题</view>
+    <view wx:for="{{mesboard}}" wx:key="{{item.index}}">
+      <view class='diytext Q'>{{item.answer==""?item.question:"Q:"+item.question}}</view>
+      <view class='diytext A'>{{item.answer==""?item.answer:"A:"+item.answer}}</view>
+      <view class='diyspace'></view>
+    </view>
+    <view class='diytext' hidden='{{mesboard==""?false:true}}'>暂无留言</view>
   </view>
   <view class='list' wx:for="{{btnlist}}" wx:key="{{item.index}}" data-id="{{item.index}}" bindtap='clickbtn'>
     <text>{{item.name}}</text>

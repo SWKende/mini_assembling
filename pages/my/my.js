@@ -3,7 +3,8 @@ Page({
   data: {
     btnlist: [],
     message: true,
-    mesdata: ''
+    mesdata: '',
+    mesboard: []
   },
   onLoad() {
     let btnlist = [{
@@ -26,13 +27,26 @@ Page({
       title: '数据获取中',
       mask: true
     })
+
+  },
+  onShow() {
+    let that = this
+
     let Diary = Bmob.Object.extend("message");
     let query = new Bmob.Query(Diary);
-    query.equalTo("type","<",1)
+    query.equalTo("type", 1)
     query.find({
       success(res) {
         wx.hideLoading()
-        console.log(res)
+        // console.log(res)
+        let arr = new Array();
+        for (let i = 0; i < res.length; i++) {
+          arr.push(res[i].attributes);
+        };
+        that.setData({
+          mesboard: arr
+        })
+        console.log(typeof that.data.mesboard)
       },
       error(res) {
         wx.hideLoading()
@@ -43,7 +57,6 @@ Page({
       }
     })
   },
-  onShow() {},
   clickbtn(e) {
     let index = e.currentTarget.dataset.id;
     if (index == 1) {
@@ -79,34 +92,42 @@ Page({
       content: '点击提交后会审核，审核通过将会出现在网友留言板当中',
       success(res) {
         if (res.confirm) {
-          wx.showLoading({
-            title: '请稍等',
-          })
-          var Diary = Bmob.Object.extend("message");
-          var query = new Diary();
-          query.set('question', mesdata)
-          query.save(null, {
-            success(res) {
-              console.log(res)
-              wx.hideLoading()
-              wx.showToast({
-                title: '提交成功',
-                icon: "none"
-              })
-              that.setData({
-                mesdata: '',
-                message: true
-              })
+          if (mesdata == '') {
+            wx.showToast({
+              title: '内容不能为空',
+              icon: "none"
+            })
+            // break;
+          } else {
+            wx.showLoading({
+              title: '请稍等',
+            })
+            var Diary = Bmob.Object.extend("message");
+            var query = new Diary();
+            query.set('question', mesdata)
+            query.save(null, {
+              success(res) {
+                console.log(res)
+                wx.hideLoading()
+                wx.showToast({
+                  title: '提交成功',
+                  icon: "none"
+                })
+                that.setData({
+                  mesdata: '',
+                  message: true
+                })
 
-            },
-            error(res) {
-              wx.hideLoading()
-              wx.showToast({
-                title: '提交失败',
-                icon: "none"
-              })
-            }
-          });
+              },
+              error(res) {
+                wx.hideLoading()
+                wx.showToast({
+                  title: '提交失败',
+                  icon: "none"
+                })
+              }
+            });
+          }
 
         } else if (res.cancel) {}
       }
