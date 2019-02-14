@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/my/my",
+    "pages/index/index",
     "pages/about/about",
     "pages/collection/collection",
-    "pages/index/index",
     "pages/freedomlist/freedomlist",
     "pages/pcitems/pcitems",
     "pages/indextitle/indextitle",
@@ -13,7 +13,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "灵活配机",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#eeeeee"
   },

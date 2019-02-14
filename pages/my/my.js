@@ -89,7 +89,7 @@ Page({
     let mesdata = this.data.mesdata;
     wx.showModal({
       title: '留言',
-      content: '点击提交后会审核，审核通过将会出现在网友留言板当中',
+      content: '点击确定后会审核，审核通过将会出现在网友留言板当中',
       success(res) {
         if (res.confirm) {
           if (mesdata == '') {

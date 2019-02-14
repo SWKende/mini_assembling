@@ -8,5 +8,20 @@
   <view>
     版本0.1.0
   </view>
+  <view>
+    欢迎提交bug或是意见建议，您的每句话都将会是我前进的动力
+  </view>
 </view>
-<button class='buttoncss' bindtap='feedback'>问题反馈</button>
+<button class='buttoncss' bindtap='feedback' type="primary">反馈</button>
+
+<!-- 留言单 -->
+<view class='messagebg' bindtap='hiddenbg' hidden='{{message}}'>
+</view>
+<view class='messagecss' hidden='{{message}}'>
+  <view class='mestitle'>反馈单</view>
+  <textarea class='mesinput' placeholder='请注意措辞，不要发布无关言论，字数上限200字' maxlength='200' value='{{mesdata}}' bindinput="mesInput"></textarea>
+  <view class='btnbox'>
+    <view class='btnsize cancel' bindtap='hiddenbg'>取消</view>
+    <view class='btnsize sure' bindtap='submit'>提交</view>
+  </view>
+</view>
