@@ -44,9 +44,11 @@ Page({
     })
     query.find({
       success(res) {
+        // console.log(res)
         wx.hideLoading()
         let arr = new Array();
         for (let i = 0; i < res.length; i++) {
+          res[i].attributes.correlationId = res[i].id
           arr.push(res[i].attributes);
         };
         let items = arr;

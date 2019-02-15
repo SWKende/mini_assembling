@@ -1,0 +1,19 @@
+input {
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+.inputtext{
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  width: 100rpx;
+}
+.inputcss {
+  border: 2rpx #000 solid;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 80rpx;
+  margin-left: 10%;
+}

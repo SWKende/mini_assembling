@@ -1,11 +1,13 @@
 {
   "pages": [
     "pages/my/my",
+    "pages/login/login",
+    "pages/comment/comment",
+    "pages/pcitems/pcitems",
     "pages/index/index",
     "pages/about/about",
     "pages/collection/collection",
     "pages/freedomlist/freedomlist",
-    "pages/pcitems/pcitems",
     "pages/indextitle/indextitle",
     "pages/freedom/freedom",
     "pages/history/history"
@@ -20,7 +22,7 @@
   "tabBar": {
     "backgroundColor": "#fff",
     "selectedColor": "#1177b0",
-    "position":"top",
+    "position": "top",
     "list": [
       {
         "pagePath": "pages/index/index",

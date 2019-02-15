@@ -35,11 +35,33 @@ Page({
         })
       }
     })
-
-
   },
+  //点击卡片
   clickbutton(e) {
     let id = e.currentTarget.dataset.id
-    console.log(id);
+    console.log(this.data.items[id])
+  },
+  //评论
+  commentbtn() {
+    wx.navigateTo({
+      url: '../comment/comment',
+    })
+  },
+  //收藏
+  collectionbtn() {
+    wx.showModal({
+      title: '收藏',
+      content: '收藏将会覆盖上一个',
+      success(res) {
+        if (res.confirm) {
+          wx.showToast({
+            title: '收藏成功',
+            icon:'none'
+          })
+        } else if (res.cancel) {
+
+        }
+      }
+    })
   }
 })

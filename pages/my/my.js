@@ -1,4 +1,5 @@
 const Bmob = require('../../utils/bmob.js');
+const islogin = require('../../utils/islogin.js')
 Page({
   data: {
     btnlist: [],
@@ -72,9 +73,12 @@ Page({
         url: '../about/about',
       })
     } else if (index == 4) {
-      this.setData({
-        message: false,
-      })
+      if (islogin.islogin()) {
+        this.setData({
+          message: false,
+        })
+      }
+
     }
   },
   messageboardbtn() {},

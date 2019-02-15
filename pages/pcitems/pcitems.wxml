@@ -1,6 +1,12 @@
 <view class='page' hidden='{{nodata}}'>
-  <view class='card' wx:for="{{items}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='clickbutton'>
-    <view class='titlecard'>{{item.title}}</view>
+  <view class='card' wx:for="{{items}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindlongtap='clickbutton'>
+    <view class='titlecard'>
+      <view class='titlecard title'>
+        {{item.title}}
+      </view>
+      <view class='icon_comment' bindtap='commentbtn'></view>
+      <view class='icon_collection' bindtap='collectionbtn'></view>
+    </view>
     <view class='cardname'>CPU
       <p class='listname'>{{item.cpu}}</p>
       <p class="price">{{item.cpu_p}}</p>
@@ -38,5 +44,5 @@
 </view>
 
 <view class='nodatacss' hidden='{{!nodata}}'>
-   ---- 没有数据 ----
+  ---- 没有数据 ----
 </view>
