@@ -1,8 +1,11 @@
-function islogin() {
+const Bmob = require('../utils/bmob.js');
+
+function islogin(that, method) {
   wx.getStorage({
-    key: 'islogin',
+    key: Bmob._getBmobPath(Bmob.User._CURRENT_USER_KEY),
     success(res) {
-      return true;
+      //通过返回过来的方法进行setData赋值
+      that.setData(method)
     },
     fail(res) {
       wx.showToast({

@@ -73,11 +73,11 @@ Page({
         url: '../about/about',
       })
     } else if (index == 4) {
-      if (islogin.islogin()) {
-        this.setData({
-          message: false,
-        })
+
+      let test = {
+        message: false,
       }
+      islogin.islogin(this,test)
 
     }
   },

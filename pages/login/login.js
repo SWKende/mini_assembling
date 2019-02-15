@@ -35,10 +35,17 @@ Page({
     user.set("password", this.data.pw_value)
     user.signUp(null, {
       success(res) {
+        wx.showToast({
+          title: '注册成功',
+          icon: "none"
+        })
         console.log(res)
       },
-      fail(res) {
-        console.log(1)
+      error(res) {
+        wx.showToast({
+          title: '此账号已存在',
+          icon: "none"
+        })
         console.log(res)
       }
     })
@@ -46,10 +53,17 @@ Page({
   signin() {
     Bmob.User.logIn(this.data.phone_value, this.data.pw_value, {
       success(res) {
+        wx.showToast({
+          title: '登陆成功',
+          icon: "none"
+        })
         console.log(res)
-        console.log(1)
       },
       error(res) {
+        wx.showToast({
+          title: '请检查账号密码',
+          icon: "none"
+        })
         console.log(res)
       }
     })

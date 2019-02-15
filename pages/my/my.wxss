@@ -21,13 +21,15 @@
 }
 
 .Q {
-  color: #003366;
+  color: #036;
 }
-.notice{
+
+.notice {
   font-size: 22rpx;
-  color:#f07c82;
+  color: #f07c82;
   text-align: right;
 }
+
 .diyspace {
   margin-top: 20rpx;
 }
