@@ -4,8 +4,8 @@
       <view class='titlecard title'>
         {{item.title}}
       </view>
-      <view class='icon_comment' bindtap='commentbtn'></view>
-      <view class='icon_collection' bindtap='collectionbtn'></view>
+      <view class='icon_comment' bindtap='commentbtn' data-id="{{item.id}}"></view>
+      <view class='icon_collection' bindtap='collectionbtn' data-id="{{item.id}}"></view>
     </view>
     <view class='cardname'>CPU
       <p class='listname'>{{item.cpu}}</p>
@@ -41,8 +41,8 @@
     </view>
     <!-- <button class='download' hover-class='download_hover'>click</button> -->
   </view>
-</view>
 
+</view>
 <view class='nodatacss' hidden='{{!nodata}}'>
   ---- 没有数据 ----
 </view>

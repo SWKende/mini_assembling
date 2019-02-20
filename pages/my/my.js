@@ -70,9 +70,8 @@ Page({
         url: '../history/history',
       })
     } else if (index == 2) {
-      wx.navigateTo({
-        url: '../collection/collection',
-      })
+      islogin.go_to_collection()
+     
     } else if (index == 3) {
       wx.navigateTo({
         url: '../about/about',
@@ -99,7 +98,6 @@ Page({
           } else if (res.cancel) {}
         },
       })
-
     }
   },
   messageboardbtn() {},

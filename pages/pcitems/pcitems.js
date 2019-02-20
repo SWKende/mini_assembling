@@ -1,4 +1,5 @@
-const islogin = require('../../utils/islogin.js')
+const islogin = require('../../utils/islogin.js');
+const Bmob = require('../../utils/bmob.js');
 Page({
   data: {
     items: [],
@@ -44,12 +45,20 @@ Page({
   },
   //评论
   commentbtn() {
+    let id = e.currentTarget.dataset.id
+    //每组信息的唯一id
+    let correlationId = this.data.items[id].correlationId
+    // console.log(correlationId)
     wx.navigateTo({
       url: '../comment/comment',
     })
   },
   //收藏
-  collectionbtn() {
-    islogin.collection();
-  }
+  collectionbtn(e) {
+    let id = e.currentTarget.dataset.id
+    //每组信息的唯一id
+    let correlationId = this.data.items[id].correlationId
+    islogin.collection(correlationId);
+    // console.log(correlationId)
+  },
 })

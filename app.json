@@ -2,11 +2,11 @@
   "pages": [
     "pages/my/my",
     "pages/login/login",
-    "pages/comment/comment",
+    "pages/collection/collection",
     "pages/pcitems/pcitems",
+    "pages/comment/comment",
     "pages/index/index",
     "pages/about/about",
-    "pages/collection/collection",
     "pages/freedomlist/freedomlist",
     "pages/indextitle/indextitle",
     "pages/freedom/freedom",

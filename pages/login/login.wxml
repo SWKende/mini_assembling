@@ -3,7 +3,7 @@
   <view class='inputbox'>
     <view class='inputcss'>
       <view class='inputtext'>手机号</view>
-      <input placeholder="请输入您的手机号" bindinput='phoneinput' type="number"></input>
+      <input placeholder="请输入您的手机号" bindinput='phoneinput' type="number" maxlength='11'></input>
     </view>
     <view class='inputcss' hidden='{{!inorup}}'>
       <view class='inputtext'>昵称</view>
