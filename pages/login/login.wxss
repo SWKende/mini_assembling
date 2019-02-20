@@ -1,14 +1,73 @@
-input {
-  font-size: 32rpx;
-  margin-left: 20rpx;
+image {
+  width: 80%;
+  height: 350rpx;
+  margin-left: 10%;
+  margin-top: 20rpx;
+  filter: blur(2px);
 }
-.inputtext{
+
+input {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  color: #000;
+}
+
+switch {
+  font-size: 28rpx;
+  text-align: left;
+  margin-left: 10%;
+  color: #1177b0;
+}
+
+.box {
+  position: absolute;
+  bottom: 100rpx;
+  width: 100%;
+}
+
+.inputbox {
+  margin-bottom: 30rpx;
+}
+
+button {
+  border-radius: 50rpx;
+  margin-top: 30rpx;
+  width: 80%;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.upcss {
+  border: 2rpx #1177b0 solid;
+  background-color: #fff;
+  color: #1177b0;
+}
+
+.upcss.button-hover {
+  border: 2rpx #134857 solid;
+  background-color: #fff;
+  color: #134857;
+}
+
+.incss {
+  border: 2rpx #1177b0 solid;
+  background-color: #1177b0;
+}
+
+.button-hover {
+  border: 2rpx #2486b9 solid;
+  background-color: #2486b9;
+}
+
+.inputtext {
   font-size: 28rpx;
   margin-left: 20rpx;
   width: 100rpx;
+  color: rgb(114, 114, 114);
 }
+
 .inputcss {
-  border: 2rpx #000 solid;
+  border-bottom: 2rpx #1177b0 solid;
   font-size: 28rpx;
   margin-top: 20rpx;
   display: flex;

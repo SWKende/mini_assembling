@@ -1,14 +1,20 @@
-<view class='inputcss'>
-  <view class='inputtext'>手机号</view>
-  <input placeholder="请输入您的手机号" bindinput='phoneinput'></input>
+<image src='https://user-gold-cdn.xitu.io/2018/9/19/165f147d81817245?imageView2/0/w/1280/h/960/format/webp/ignore-error/1'></image>
+<view class='box'>
+  <view class='inputbox'>
+    <view class='inputcss'>
+      <view class='inputtext'>手机号</view>
+      <input placeholder="请输入您的手机号" bindinput='phoneinput' type="number"></input>
+    </view>
+    <view class='inputcss' hidden='{{!inorup}}'>
+      <view class='inputtext'>昵称</view>
+      <input placeholder="请输入您的昵称" bindinput='nameinput'></input>
+    </view>
+    <view class='inputcss'>
+      <view class='inputtext'>密码</view>
+      <input placeholder="请输入您的密码" bindinput='passwordinput' type='password'></input>
+    </view>
+  </view>
+  <switch color='#1177b0' style='zoom:0.7' bindchange="switchChange">是否注册</switch>
+  <button bindtap='signup' class='upcss' hidden='{{!inorup}}'>注册</button>
+  <button bindtap='signin' class='incss' hidden='{{inorup}}'>登陆</button>
 </view>
-<view class='inputcss'>
-  <view class='inputtext'>昵称</view>
-  <input placeholder="请输入您的昵称" bindinput='nameinput'></input>
-</view>
-<view class='inputcss'>
-  <view class='inputtext'>密码</view>
-  <input placeholder="请输入您的密码" bindinput='passwordinput'></input>
-</view>
-<button bindtap='signup'>注册</button>
-<button bindtap='signin'>登陆</button>

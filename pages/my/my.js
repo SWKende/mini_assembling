@@ -9,18 +9,23 @@ Page({
   },
   onLoad() {
     let btnlist = [{
-      "name": "历史公告",
-      "index": 1
-    }, {
-      "name": "收藏",
-      "index": 2
-    }, {
-      "name": "关于",
-      "index": 3
-    }, {
-      "name": "留言",
-      "index": 4
-    }]
+        "name": "历史公告",
+        "index": 1
+      }, {
+        "name": "收藏",
+        "index": 2
+      }, {
+        "name": "关于",
+        "index": 3
+      }, {
+        "name": "留言",
+        "index": 4
+      },
+      {
+        "name": "退出登陆",
+        "index": 5
+      }
+    ]
     this.setData({
       btnlist: btnlist,
     })
@@ -47,7 +52,7 @@ Page({
         that.setData({
           mesboard: arr
         })
-        console.log(typeof that.data.mesboard)
+        // console.log(typeof that.data.mesboard)
       },
       error(res) {
         wx.hideLoading()
@@ -73,11 +78,27 @@ Page({
         url: '../about/about',
       })
     } else if (index == 4) {
-
-      let test = {
+      let data = {
         message: false,
       }
-      islogin.islogin(this,test)
+      islogin.submit(this, data)
+
+    } else if (index == 5) {
+      wx.showModal({
+        title: '提示',
+        content: '请问您确定要退出吗',
+        success(res) {
+          if (res.confirm) {
+            wx.showToast({
+              title: '退出成功',
+              icon: "none",
+              success() {
+                wx.clearStorage()
+              }
+            })
+          } else if (res.cancel) {}
+        },
+      })
 
     }
   },

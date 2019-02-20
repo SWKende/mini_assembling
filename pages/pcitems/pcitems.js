@@ -1,3 +1,4 @@
+const islogin = require('../../utils/islogin.js')
 Page({
   data: {
     items: [],
@@ -49,19 +50,6 @@ Page({
   },
   //收藏
   collectionbtn() {
-    wx.showModal({
-      title: '收藏',
-      content: '收藏将会覆盖上一个',
-      success(res) {
-        if (res.confirm) {
-          wx.showToast({
-            title: '收藏成功',
-            icon:'none'
-          })
-        } else if (res.cancel) {
-
-        }
-      }
-    })
+    islogin.collection();
   }
 })
