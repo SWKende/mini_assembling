@@ -2,6 +2,7 @@ const Bmob = require('../../utils/bmob.js');
 const islogin = require('../../utils/islogin.js')
 Page({
   data: {
+    userinfo: [],
     btnlist: [],
     message: true,
     mesdata: '',
@@ -29,15 +30,15 @@ Page({
     this.setData({
       btnlist: btnlist,
     })
-    wx.showLoading({
-      title: '数据获取中',
-      mask: true
-    })
+    // wx.showLoading({
+    //   title: '数据获取中',
+    //   mask: true
+    // })
 
   },
   onShow() {
     let that = this
-
+    islogin.getUserinfo(this)
     let Diary = Bmob.Object.extend("message");
     let query = new Bmob.Query(Diary);
     query.equalTo("type", 1)
@@ -65,23 +66,32 @@ Page({
   },
   clickbtn(e) {
     let index = e.currentTarget.dataset.id;
+    let that = this
     if (index == 1) {
       wx.navigateTo({
         url: '../history/history',
       })
     } else if (index == 2) {
-      islogin.go_to_collection()
-     
+      if (this.data.userinfo.username == undefined || this.data.userinfo.objectId == undefined) {
+        islogin.gotologin();
+      } else {
+        wx.navigateTo({
+          url: '../collection/collection',
+        })
+      }
+
     } else if (index == 3) {
       wx.navigateTo({
         url: '../about/about',
       })
     } else if (index == 4) {
-      let data = {
-        message: false,
+      if (this.data.userinfo.username == undefined || this.data.userinfo.objectId == undefined) {
+        islogin.gotologin();
+      } else {
+        this.setData({
+          message: false,
+        })
       }
-      islogin.submit(this, data)
-
     } else if (index == 5) {
       wx.showModal({
         title: '提示',
@@ -92,7 +102,10 @@ Page({
               title: '退出成功',
               icon: "none",
               success() {
-                wx.clearStorage()
+                wx.clearStorage();
+                that.setData({
+                  userinfo: []
+                })
               }
             })
           } else if (res.cancel) {}

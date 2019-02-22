@@ -1,53 +1,33 @@
 const Bmob = require('../utils/bmob.js');
 
-//留言
-function submit(that, method) {
+//获取用户本地信息并回传给页面的data中 PS：晚点用
+function getUserinfo(that) {
   wx.getStorage({
     key: Bmob._getBmobPath(Bmob.User._CURRENT_USER_KEY),
     success(res) {
+      console.log(res);
+      //获取到的用户数据
+      let data = JSON.parse(res.data)
       //通过返回过来的方法进行setData赋值
-      that.setData(method)
+      that.setData({
+        userinfo: data
+      })
+      // console.log(that.data.userinfo)
     },
     fail(res) {
-      gotologin();
+      console.log("用户未登陆")
     }
   })
 }
+
+
 
 //收藏
 function collection(correlationId) {
   wx.getStorage({
     key: Bmob._getBmobPath(Bmob.User._CURRENT_USER_KEY),
     success(res) {
-      //获取到的用户数据
-      let data = JSON.parse(res.data)
-      //通过返回过来的方法进行setData赋值
-      wx.showModal({
-        title: '收藏',
-        content: '收藏将会覆盖上一个',
-        success(res) {
-          if (res.confirm) {
-            const Diary = new Bmob.Object.extend('_User');
-            var query = new Bmob.Query(Diary);
-            // 这个 id 是要修改条目的 id，你在生成这个存储并成功时可以获取到，请看前面的文档
-            query.get(data.objectId, {
-              success(res) {
-                res.set('collection', correlationId)
-                res.save();
-                wx.showToast({
-                  title: '收藏成功',
-                  icon: 'none'
-                })
-              },
-              error(res) {
-                console.log("error")
-              }
-            })
-          } else if (res.cancel) {
 
-          }
-        }
-      })
     },
     fail(res) {
       gotologin();
@@ -55,19 +35,6 @@ function collection(correlationId) {
   })
 }
 
-function go_to_collection() {
-  wx.getStorage({
-    key: Bmob._getBmobPath(Bmob.User._CURRENT_USER_KEY),
-    success(res) {
-      wx.navigateTo({
-        url: '../collection/collection',
-      })
-    },
-    fail(res) {
-      gotologin();
-    }
-  })
-}
 
 //未登录的用户 跳转到登陆界面
 function gotologin() {
@@ -84,7 +51,7 @@ function gotologin() {
   })
 }
 module.exports = {
-  submit: submit,
+  gotologin: gotologin,
+  getUserinfo: getUserinfo,
   collection: collection,
-  go_to_collection: go_to_collection
 }

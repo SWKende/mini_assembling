@@ -1,1 +1,57 @@
-/* pages/comment/comment.wxss */
+.commentbox {
+  background-color: #fff;
+  margin-top: 20rpx;
+  width: 100%;
+}
+
+.cominput {
+  font-size: 28rpx;
+  height: 200rpx;
+  width: 86%;
+  margin-left: 5%;
+  padding: 2%;
+  border: 2rpx #e8e8e8 solid;
+}
+
+.combutton {
+  margin-top: 15rpx;
+  width: 90%;
+  background-color: #1177b0;
+  color: #fff;
+}
+
+.button-hover {
+  background-color: #2486b9;
+}
+
+.messagebox {
+  margin-top: 40rpx;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.titlecss {
+  display: flex;
+  color: #036;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  align-items: center;
+}
+
+.reccss {
+  margin-left: 50rpx;
+  color: #f07c82;
+  font-size: 25rpx;
+}
+
+.contentcss {
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+.createdAtcss {
+  font-size: 23rpx;
+  text-align: right;
+  padding-bottom: 10rpx;
+  border-bottom: 2rpx solid #e8e8e8;
+}

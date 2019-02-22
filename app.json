@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/my/my",
+    "pages/comment/comment",
+    "pages/pcitems/pcitems",
     "pages/login/login",
     "pages/collection/collection",
-    "pages/pcitems/pcitems",
-    "pages/comment/comment",
     "pages/index/index",
     "pages/about/about",
     "pages/freedomlist/freedomlist",

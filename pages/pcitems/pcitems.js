@@ -2,11 +2,14 @@ const islogin = require('../../utils/islogin.js');
 const Bmob = require('../../utils/bmob.js');
 Page({
   data: {
+    userinfo: [],
     items: [],
     nodata: false
   },
   onLoad() {
     let that = this;
+    //获取用户信息
+    islogin.getUserinfo(this)
     wx.getStorage({
       key: 'pc_items',
       success(res) {
@@ -44,13 +47,13 @@ Page({
     console.log(this.data.items[id])
   },
   //评论
-  commentbtn() {
+  commentbtn(e) {
     let id = e.currentTarget.dataset.id
     //每组信息的唯一id
-    let correlationId = this.data.items[id].correlationId
+    let correlationId = this.data.items[id].correlationId;
     // console.log(correlationId)
     wx.navigateTo({
-      url: '../comment/comment',
+      url: '../comment/comment?' + "correlationId=" + correlationId,
     })
   },
   //收藏
@@ -58,7 +61,39 @@ Page({
     let id = e.currentTarget.dataset.id
     //每组信息的唯一id
     let correlationId = this.data.items[id].correlationId
-    islogin.collection(correlationId);
-    // console.log(correlationId)
+    let userinfo = this.data.userinfo
+    if (this.data.userinfo.username == undefined || this.data.userinfo.objectId == undefined) {
+      islogin.gotologin();
+    } else {
+      //获取到的用户数据
+      wx.showModal({
+        title: '收藏',
+        content: '收藏将会覆盖上一个',
+        success(res) {
+          if (res.confirm) {
+            const Diary = new Bmob.Object.extend('_User');
+            var query = new Bmob.Query(Diary);
+            // 这个 id 是要修改条目的 id，你在生成这个存储并成功时可以获取到，请看前面的文档
+            query.get(userinfo.objectId, {
+              success(res) {
+                res.set('collection', correlationId)
+                res.save();
+                wx.showToast({
+                  title: '收藏成功',
+                  icon: 'none'
+                })
+              },
+              error(res) {
+                console.log("error")
+              }
+            })
+          } else if (res.cancel) {
+
+          }
+        }
+      })
+
+    }
+
   },
 })

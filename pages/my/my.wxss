@@ -64,7 +64,7 @@
 }
 
 .messagecss {
-  border: 2rpx rgb(114, 114, 114) solid;
+  border: 2rpx #727272 solid;
   background-color: #fff;
   position: absolute;
   top: 10%;
