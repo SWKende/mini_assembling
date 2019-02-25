@@ -47,6 +47,7 @@
 .contentcss {
   font-size: 28rpx;
   margin-top: 10rpx;
+  color: #666;
 }
 
 .createdAtcss {
@@ -54,4 +55,67 @@
   text-align: right;
   padding-bottom: 10rpx;
   border-bottom: 2rpx solid #e8e8e8;
+}
+
+.messagebg {
+  position: fixed;
+  background-color: #f1f1f1;
+  opacity: 0.3;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.messagecss {
+  border: 2rpx #727272 solid;
+  background-color: #fff;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  width: 80%;
+  z-index: 10;
+  border-radius: 10rpx;
+}
+
+.mestitle {
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+}
+
+.mesinput {
+  font-size: 28rpx;
+  height: 450rpx;
+  width: 84%;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding: 3%;
+  border: 2rpx #e8e8e8 solid;
+}
+
+.btnbox {
+  margin-top: 10rpx;
+  height: 100rpx;
+  display: flex;
+}
+
+.btnsize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.cancel {
+  color: gray;
+}
+
+.sure {
+  color: #1177b0;
+}
+
+.sure-hover {
+  color: #fff;
 }

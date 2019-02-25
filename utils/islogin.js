@@ -22,19 +22,6 @@ function getUserinfo(that) {
 
 
 
-//收藏
-function collection(correlationId) {
-  wx.getStorage({
-    key: Bmob._getBmobPath(Bmob.User._CURRENT_USER_KEY),
-    success(res) {
-
-    },
-    fail(res) {
-      gotologin();
-    }
-  })
-}
-
 
 //未登录的用户 跳转到登陆界面
 function gotologin() {
@@ -53,5 +40,4 @@ function gotologin() {
 module.exports = {
   gotologin: gotologin,
   getUserinfo: getUserinfo,
-  collection: collection,
 }

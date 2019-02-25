@@ -54,7 +54,7 @@
 }
 
 .messagebg {
-  position: absolute;
+  position: fixed;
   background-color: #f1f1f1;
   opacity: 0.3;
   top: 0;
@@ -66,7 +66,7 @@
 .messagecss {
   border: 2rpx #727272 solid;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 10%;
   right: 10%;
   width: 80%;
