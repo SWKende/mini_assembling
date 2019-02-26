@@ -59,7 +59,7 @@ Page({
         },
         error(res) {
           wx.showToast({
-            title: '此账号已存在',
+            title: '此账号已存在或不合规',
             icon: "none"
           })
           console.log(res)

@@ -4,7 +4,7 @@
 </view>
 
 <view class='messagebox'>
-  <view wx:for="{{items}}" wx:key="{{item.firstuserid}}" data-id="{{item.firstuserid}}" data-firstname="{{item.firstname}}" bindtap='recsubmit' bindlongtap='delsubmit'>
+  <view wx:for="{{items}}" wx:key="{{item.firstuserid}}" data-id="{{item.firstuserid}}" data-firstname="{{item.firstname}}" data-commend="{{item.commend}}" data-objectid='{{item.objectId}}' bindtap='recsubmit' bindlongtap='delsubmit'>
     <view class='titlecss'>{{item.firstname}}
       <view class='reccss' hidden="{{item.recname==''?true:flase}}">@{{item.recname}}</view>
     </view>
@@ -18,7 +18,7 @@
 <view class='messagebg' bindtap='hiddenbg' hidden='{{message}}'>
 </view>
 <view class='messagecss' hidden='{{message}}'>
-  <view class='mestitle'>回复@{{recname}}</view>
+  <view class='mestitle'>回复@{{rec_name}}</view>
   <textarea class='mesinput' placeholder='请注意措辞，不要发布无关言论，字数上限100字' maxlength='100' value='{{mesdata}}' bindinput="mesInput"></textarea>
   <view class='btnbox'>
     <view class='btnsize cancel' bindtap='hiddenbg'>取消</view>

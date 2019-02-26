@@ -10,6 +10,7 @@ input {
   font-size: 28rpx;
   margin-left: 20rpx;
   color: #000;
+  width: 100%
 }
 
 switch {

@@ -10,7 +10,8 @@ Page({
     correlationId: '',
     message: true,
     recset: [],
-    recname: ''
+    rec_name: '',
+    del_commend: ''
   },
   onLoad(e) {
     // console.log(e.correlationId);
@@ -40,6 +41,7 @@ Page({
         let arr = new Array()
         for (let i = 0; i < res.length; i++) {
           res[i].attributes.createdAt = res[i].createdAt;
+          res[i].attributes.objectId = res[i].id;
           arr.push(res[i].attributes);
         }
         that.setData({
@@ -115,10 +117,6 @@ Page({
   },
   //判断是否可以回复
   recsubmit(e) {
-    //保存用户的姓名
-    let name = this.data.userinfo.username;
-    //保存用户的id
-    let id = this.data.userinfo.objectId;
     //被回复者
     let recname = e.currentTarget.dataset.firstname;
     let recid = e.currentTarget.dataset.id;
@@ -126,7 +124,7 @@ Page({
     let firstname = this.data.userinfo.username;
     let firstuserid = this.data.userinfo.objectId;
 
-    if (name == undefined || id == undefined) {
+    if (firstname == undefined || firstuserid == undefined) {
       islogin.gotologin();
     } else {
 
@@ -141,24 +139,61 @@ Page({
         this.setData({
           message: false,
           recset: recset,
-          recname: recname
+          rec_name: recname
         })
       }
     }
   },
   //删除评论
   delsubmit(e) {
-    wx.showModal({
-      title: "提示",
-      content: '请问确定要删除此条评论吗',
-      success(res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        } else if (res.cancel) {
-          console.log('用户点击取消')
+    let that = this
+    //要被删除的评论唯一id
+    console.log(e.currentTarget.dataset.objectid);
+    let objectId = e.currentTarget.dataset.objectid;
+    //要被删除的用户
+    let deluserid = e.currentTarget.dataset.id;
+    let del_commend = e.currentTarget.dataset.commend;
+    //当前用户
+    let firstuserid = this.data.userinfo.objectId;
+    if (firstuserid == deluserid) {
+      wx.showModal({
+        title: "提示",
+        content: '请问确定要删除“' + del_commend + '”吗',
+        success(res) {
+          if (res.confirm) {
+            let Diary = Bmob.Object.extend("commend");
+            let query = new Bmob.Query(Diary);
+            query.get(objectId, {
+              success: function(object) {
+                object.destroy({
+                  success: function(deleteObject) {
+                    wx.showToast({
+                      title: '删除成功',
+                      icon: "none"
+                    })
+                    setTimeout(function() {
+                      that.get_comment(that.data.correlationId)
+                    }, 1000)
+                  },
+                  error: function(object, error) {
+                    wx.showToast({
+                      title: '删除失败',
+                      icon: "none"
+                    })
+                  }
+                });
+              },
+              error: function(object, error) {
+                console.log("query object fail");
+              }
+            });
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
         }
-      }
-    })
+      })
+    }
+
   },
   //获取用户回复内容
   mesInput(e) {
