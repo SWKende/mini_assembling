@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/my/my",
+    "pages/indextitle/indextitle",
     "pages/comment/comment",
     "pages/pcitems/pcitems",
     "pages/login/login",
@@ -8,7 +9,6 @@
     "pages/index/index",
     "pages/about/about",
     "pages/freedomlist/freedomlist",
-    "pages/indextitle/indextitle",
     "pages/freedom/freedom",
     "pages/history/history"
   ],

@@ -1,5 +1,30 @@
 <view class='content'>
-  <view class='titlecss'></view>
-  <view class='subheadingcss'>『副标题』</view>
-  <view class='textcss'>通常text-indent缩进属性将对段落首行开头文本文字进行缩进显示。如果使用html br换行标签，第二个换行开始也不会出现缩进效果。如果使用了html P段落标签段落换行，将会出现每个p段落换行开头都将缩进，这里我们给大家通过案例演示给大家，希望通过DIVCSS5案例掌握CSS text-indent缩进样式。</view>
+  <view class='titlecss'>给大家的第一封信</view>
+  <view class='textcss'>首先说明，配置单这个并没有完全标准或者是统一的答案，仅仅是作为一个可用的参考，便于小白不是特别了解行情或者型号的情况下，可以免去多余的顾虑，一样能组装出一个性价比和颜值高的主机。</view>
+</view>
+<view class='textcss'>如何选购配件，其实很多情况下都是因人而已，一般情况下，需要考虑的是自己的需求，在确认需求的情况下寻找合适自己的配件，最终组装出一台电脑。
+</view>
+<view class='subheadingcss'>『关于CPU』</view>
+<view class='textcss'>CPU最近的行情非常不稳定，价格有的涨有的跌，可供用户选择的CPU也就Intel和AMD，考虑个人需求，从而选购合适的CPU。
+</view>
+<view class='subheadingcss'>『关于主板』</view>
+<view class='textcss'>主板也和CPU一样，CPU选了Intel或是AMD，也关系到主板的选择，主板作为电脑中的交通枢纽，它是相当重要的存在，选购主板的过程中，集中考虑的是扩展性和未来可升级的空间，同时主板不仅决定CPU同时还决定了内存条是DDR4还是DDR3。
+</view>
+<view class='subheadingcss'>『关于内存条』</view>
+<view class='textcss'>内存条目前DDR4是主流，相比DDR3的内存条有诸多方面的提升，除了价格，曾经被誉为金条，现今价格逐渐恢复，虽然还没到史上最低，但当前也是非常不错的价格了。
+</view>
+<view class='subheadingcss'>『关于显卡』</view>
+<view class='textcss'>在推荐行列中，在预算允许的情况下会尽可能的推荐新显卡，但也不排除会推荐二手显卡，毕竟只要便宜，什么都能真香起来 =_=，对于办公机来说，在有核显的情况下，可以不用考虑购买显卡，在预算中可以剩下一笔费用。
+</view>
+<view class='subheadingcss'>『关于硬盘』</view>
+<view class='textcss'>推荐优先考虑至少一个固态硬盘作为系统盘，固态硬盘对比机械硬盘的使用体验是成倍提升的。
+</view>
+<view class='subheadingcss'>『关于CPU散热器』</view>
+<view class='textcss'>根据CPU的情况，选购至少可以压得住发热的散热器为主要目标。
+</view>
+<view class='subheadingcss'>『关于电源』</view>
+<view class='textcss'>电源是作为电脑的心脏，是供电来源，不合格的电源会对其他硬件造成不同程度的影响，有时候烧了都不足为奇，选购哪种电源网上都有参考，在这里暂不做大篇幅详解。
+</view>
+<view class='subheadingcss'>『关于机箱』</view>
+<view class='textcss'>机箱的选择就非常多了，主要考虑满足当前选择的主板版型能装上去，还有多少个硬盘仓位等，是一个可以完全根据个人喜好选择的配件。
 </view>
