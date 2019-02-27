@@ -1,0 +1,22 @@
+<button type='primary' bindtap='addbtn'>新增</button>
+<picker value='{{index}}' bindchange='bindPickerChange' range="{{array}}">
+  <view class='pickview'>
+    当前选择：{{array[index]}}
+  </view>
+</picker>
+<view hidden='{{ifchange}}'>
+  <input bindinput='changepricebtn' type='number' value='{{price}}'></input>
+  <button bindtap='changesubmit'>修改{{name}}</button>
+</view>
+<view wx:for="{{items}}" wx:key="{{item.objectid}}" data-objectid='{{item.objectid}}' data-name='{{item.name}}' bindlongtap='delectbtn' bindtap='changebtn'>
+  <view class='itemcss'>
+    <view>{{item.name}}</view>
+    <view>{{item.price}}</view>
+  </view>
+</view>
+<view class='box' hidden='{{ifadd}}'>
+  <input placeholder='名字' value='{{add_name}}' bindinput='inputaddname'></input>
+  <input placeholder='价格' value='{{add_price}}' bindinput='inputaddprice' type='number'></input>
+  <button bindtap='addsubmit'>添加</button>
+  <button bindtap='addhidden'>关闭</button>
+</view>
