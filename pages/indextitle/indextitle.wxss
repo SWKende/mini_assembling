@@ -10,7 +10,9 @@
   font-weight: bold;
   border-bottom: 2rpx solid #e8e8e8;
 }
-
+.importioncss{
+  color: #f07c82;
+}
 .subheadingcss {
   width: 100%;
   font-size: 34rpx;
@@ -19,7 +21,6 @@
 
 .textcss {
   margin-top: 10rpx;
-  width: 100%;
   font-size: 28rpx;
   color: #898989;
   text-indent:50rpx;

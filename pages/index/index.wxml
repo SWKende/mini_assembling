@@ -1,7 +1,7 @@
 <view class="titlecss" bindtap='titlebtn'>
   <image src='../../image/notice.png' class='noticecss'></image>
 </view>
-<view class='warning'>*以下推荐仅保证能组装能用，如遇特殊情况概不负责</view>
+<view class='warning'>*装机配置没有标准答案，以下推荐仅做参考，可根据具体情况灵活变换需求</view>
 <view class='forcss' wx:for="{{position}}" wx:key="{{item.price}}" data-id="{{item.price}}" bindtap='clickbtn'>
   <view class='contenttitle'> ~ {{item.name}}价位电脑推荐 ~</view>
   <view class='content'>

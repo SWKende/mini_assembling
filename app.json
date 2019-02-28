@@ -1,16 +1,16 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/my/my",
     "pages/test/test",
+    "pages/freedom/freedom",
     "pages/indextitle/indextitle",
     "pages/comment/comment",
     "pages/pcitems/pcitems",
     "pages/login/login",
     "pages/collection/collection",
-    "pages/index/index",
     "pages/about/about",
     "pages/freedomlist/freedomlist",
-    "pages/freedom/freedom",
     "pages/history/history"
   ],
   "window": {

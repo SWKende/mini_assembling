@@ -18,6 +18,7 @@ input {
 
 .box {
   position: fixed;
+  top:500rpx;
   width: 80%;
   background-color: #e8e8e8;
   margin-left: 10%;
