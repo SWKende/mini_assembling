@@ -8,8 +8,7 @@ Page({
   },
   onLoad() {
     let that = this;
-    //获取用户信息
-    islogin.getUserinfo(this)
+
     wx.getStorage({
       key: 'pc_items',
       success(res) {
@@ -40,6 +39,10 @@ Page({
         })
       }
     })
+  },
+  onShow() {
+    //获取用户信息
+    islogin.getUserinfo(this)
   },
   //点击卡片
   clickbutton(e) {

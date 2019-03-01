@@ -2,16 +2,17 @@
   <textarea class='cominput' placeholder='请注意措辞，不要发布无关言论，字数上限100字' maxlength='100' value='{{comvalue}}' bindinput="comInput"></textarea>
   <button class='combutton' bindtap='submit'>评论</button>
 </view>
-
-<view class='messagebox'>
-  <view wx:for="{{items}}" wx:key="{{item.firstuserid}}" data-id="{{item.firstuserid}}" data-firstname="{{item.firstname}}" data-commend="{{item.commend}}" data-objectid='{{item.objectId}}' bindtap='recsubmit' bindlongtap='delsubmit'>
-    <view class='titlecss'>{{item.firstname}}
-      <view class='reccss' hidden="{{item.recname==''?true:flase}}">@{{item.recname}}</view>
+<scroll-view scroll-y='true' bindscrolltolower='lower'  style="height:{{height}}px">
+  <view class='messagebox'>
+    <view wx:for="{{items}}" wx:key="{{item.firstuserid}}" data-id="{{item.firstuserid}}" data-firstname="{{item.firstname}}" data-commend="{{item.commend}}" data-objectid='{{item.objectId}}' bindtap='recsubmit' bindlongtap='delsubmit'>
+      <view class='titlecss'>{{item.firstname}}
+        <view class='reccss' hidden="{{item.recname==''?true:false}}">@{{item.recname}}</view>
+      </view>
+      <view class='contentcss'>{{item.commend}}</view>
+      <view class='createdAtcss'>{{item.createdAt}}</view>
     </view>
-    <view class='contentcss'>{{item.commend}}</view>
-    <view class='createdAtcss'>{{item.createdAt}}</view>
   </view>
-</view>
+</scroll-view>
 
 
 <!-- 回复单 -->

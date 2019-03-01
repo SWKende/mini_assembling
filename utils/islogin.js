@@ -12,6 +12,17 @@ function getUserinfo(that) {
       that.setData({
         userinfo: data
       })
+      // if (that.data.userinfo.username != undefined && that.data.btnlist != undefined) {
+      //   let arr = that.data.btnlist
+      //   let add = {
+      //     "name": "退出登陆",
+      //     "index": 5
+      //   }
+      //   arr.push(add)
+      //   that.setData({
+      //     btnlist: arr
+      //   })
+      // }
       // console.log(that.data.userinfo)
     },
     fail(res) {

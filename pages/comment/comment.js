@@ -11,9 +11,18 @@ Page({
     message: true,
     recset: [],
     rec_name: '',
-    del_commend: ''
+    del_commend: '',
+    height: '', //记录滑动高度
+    skiplist: 20
   },
   onLoad(e) {
+    wx.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          height: res.windowHeight * 0.7
+        })
+      }
+    })
     // console.log(e.correlationId);
     this.get_comment(e.correlationId)
     this.setData({
@@ -33,6 +42,8 @@ Page({
     var Diary = Bmob.Object.extend("commend");
     var query = new Bmob.Query(Diary);
     query.equalTo("correlationId", correlationId);
+    query.descending("createdAt");
+    query.limit(20);
     query.find({
       success(res) {
         wx.hideLoading()
@@ -249,5 +260,41 @@ Page({
         icon: "none"
       })
     }
+  },
+  lower() {
+    let that = this
+    var Diary = Bmob.Object.extend("commend");
+    var query = new Bmob.Query(Diary);
+    let skiplist = this.data.skiplist;
+    let items = this.data.items;
+    let correlationId = this.data.correlationId;
+    query.equalTo("correlationId", correlationId);
+    query.descending("createdAt");
+    query.skip(skiplist);
+    query.find({
+      success(res) {
+        if (res == '') {
+          return
+        } else {
+          for (let i = 0; i < res.length; i++) {
+            res[i].attributes.createdAt = res[i].createdAt;
+            res[i].attributes.objectId = res[i].id;
+            items.push(res[i].attributes);
+          }
+          that.setData({
+            items: items,
+            skiplist: skiplist + 20
+          })
+          console.log(items)
+        }
+      },
+      error(res) {
+        wx.hideLoading()
+        wx.showToast({
+          title: '评论加载失败',
+          icon: "none"
+        })
+      }
+    })
   }
 })

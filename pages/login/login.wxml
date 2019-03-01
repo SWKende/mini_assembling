@@ -15,6 +15,6 @@
     </view>
   </view>
   <switch color='#1177b0' style='zoom:0.7' bindchange="switchChange">是否注册</switch>
-  <button bindtap='signup' class='upcss' hidden='{{!inorup}}'>注册</button>
+  <button bindtap='signup' class='upcss' hidden='{{!inorup}}'>注册并登陆</button>
   <button bindtap='signin' class='incss' hidden='{{inorup}}'>登陆</button>
 </view>

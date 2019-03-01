@@ -10,23 +10,21 @@ Page({
   },
   onLoad() {
     let btnlist = [{
-        "name": "历史公告",
-        "index": 1
-      }, {
-        "name": "收藏",
-        "index": 2
-      }, {
-        "name": "关于",
-        "index": 3
-      }, {
-        "name": "留言",
-        "index": 4
-      },
-      {
-        "name": "退出登陆",
-        "index": 5
-      }
-    ]
+      "name": "历史公告",
+      "index": 1
+    }, {
+      "name": "收藏",
+      "index": 2
+    }, {
+      "name": "关于",
+      "index": 3
+    }, {
+      "name": "留言",
+      "index": 4
+    }, {
+      "name": "退出登陆",
+      "index": 5
+    }]
     this.setData({
       btnlist: btnlist,
     })
@@ -38,7 +36,7 @@ Page({
   },
   onShow() {
     let that = this
-    islogin.getUserinfo(this)
+    islogin.getUserinfo(this);
     let Diary = Bmob.Object.extend("message");
     let query = new Bmob.Query(Diary);
     query.equalTo("type", 1)
@@ -93,24 +91,34 @@ Page({
         })
       }
     } else if (index == 5) {
-      wx.showModal({
-        title: '提示',
-        content: '请问您确定要退出吗',
-        success(res) {
-          if (res.confirm) {
-            wx.showToast({
-              title: '退出成功',
-              icon: "none",
-              success() {
-                wx.clearStorage();
-                that.setData({
-                  userinfo: []
-                })
-              }
-            })
-          } else if (res.cancel) {}
-        },
-      })
+      if (this.data.userinfo.username != undefined) {
+        wx.showModal({
+          title: '提示',
+          content: '请问您确定要退出吗',
+          success(res) {
+            if (res.confirm) {
+              wx.showToast({
+                title: '退出成功',
+                icon: "none",
+                success() {
+                  wx.clearStorage();
+                  that.setData({
+                    userinfo: []
+                  })
+                }
+              })
+            } else if (res.cancel) {}
+          },
+        })
+      }else{
+        wx.showToast({
+          title: '没登陆就不要点啦',
+          icon: "none",
+          success() {
+          }
+        })
+      }
+
     }
   },
   messageboardbtn() {},
