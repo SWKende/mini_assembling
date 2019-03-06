@@ -1,11 +1,11 @@
 <image src='https://user-gold-cdn.xitu.io/2018/9/19/165f147d81817245?imageView2/0/w/1280/h/960/format/webp/ignore-error/1'></image>
 <view class='box'>
   <view class='inputbox'>
-    <view class='inputcss'>
-      <view class='inputtext'>ID号</view>
-      <input placeholder="请输入自拟的11位ID号码" bindinput='phoneinput' type="number" maxlength='11'></input>
-    </view>
     <view class='inputcss' hidden='{{!inorup}}'>
+      <view class='inputtext'>手机号</view>
+      <input placeholder="请输入您的手机号码" bindinput='phoneinput' type="number" maxlength='11'></input>
+    </view>
+    <view class='inputcss' >
       <view class='inputtext'>昵称</view>
       <input placeholder="请输入您的昵称" bindinput='nameinput'></input>
     </view>

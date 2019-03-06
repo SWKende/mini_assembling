@@ -73,11 +73,11 @@ Page({
     }
   },
   signin() {
-    let phone_value = this.data.phone_value;
+    let name_value = this.data.name_value;
     let pw_value = this.data.pw_value;
 
-    if (phone_value != '' && pw_value != '') {
-      Bmob.User.logIn(this.data.phone_value, this.data.pw_value, {
+    if (name_value != '' && pw_value != '') {
+      Bmob.User.logIn(this.data.name_value, this.data.pw_value, {
         success(res) {
           wx.showToast({
             title: '登陆成功',

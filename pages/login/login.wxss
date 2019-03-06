@@ -63,7 +63,7 @@ button {
 .inputtext {
   font-size: 28rpx;
   margin-left: 20rpx;
-  width: 100rpx;
+  width: 150rpx;
   color: rgb(114, 114, 114);
 }
 

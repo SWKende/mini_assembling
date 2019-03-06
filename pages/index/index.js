@@ -63,6 +63,7 @@ Page({
             items[i].memory_p +
             items[i].power_p +
             items[i].video_card_p;
+          items[i].totalprice = price;
           if (0 < price && price <= 2000) {
             data[0].position_data[i] = items[i]
           } else if (2000 < price && price <= 4000) {
@@ -82,9 +83,7 @@ Page({
     })
 
   },
-  onShow() {
-
-  },
+  onShow() {},
   clickbtn(e) {
     let id = e.currentTarget.dataset.id;
     let position = this.data.position;
