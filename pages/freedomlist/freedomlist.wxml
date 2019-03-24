@@ -2,7 +2,7 @@
 <view wx:for="{{items}}" wx:key="{{item.name}}" class='listcss' hidden='{{nodata}}'>
   <view class='listhead'></view>
   <view class='listname'>{{item.name}}</view>
-  <view class='listprice'>{{item.price}}</view>
+  <!-- <view class='listprice'>{{item.price}}</view> -->
 </view>
 <view hidden='{{!nodata}}' class='nodatacss'>
   ---- 没有数据 ----

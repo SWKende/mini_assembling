@@ -1,4 +1,4 @@
-<view class='notice'>实验性功能，以后可能会砍，这里将仅作参考，并没有把所有的产品列举完，如有缺漏敬请谅解</view>
+<view class='notice'>“市场”是列举最新的产品和型号，为避免用户购买商品时买到非新产品，价格动荡，“市场”将不再提供查价功能</view>
 <view class='content' bindtap='clickbtn' wx:for="{{position}}" wx:key="{{item.index}}" data-id='{{item.index}}'>
   <view class='textcss'>{{item.name}}</view>
   <image class='imagecss' src='{{item.image}}'></image>

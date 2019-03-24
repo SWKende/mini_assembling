@@ -46,6 +46,9 @@ Page({
         // console.log(res)
         let arr = new Array();
         for (let i = 0; i < res.length; i++) {
+          if (res[i].attributes.answer == undefined) {
+            res[i].attributes.answer = ""
+          }
           arr.push(res[i].attributes);
         };
         that.setData({
@@ -110,12 +113,11 @@ Page({
             } else if (res.cancel) {}
           },
         })
-      }else{
+      } else {
         wx.showToast({
           title: '没登陆就不要点啦',
           icon: "none",
-          success() {
-          }
+          success() {}
         })
       }
 

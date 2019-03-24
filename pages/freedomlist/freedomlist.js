@@ -37,7 +37,6 @@ Page({
             break;
         }
 
-
         that.setData({
           items: res.data,
           fdtitle: fdtitle
